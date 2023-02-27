@@ -1,0 +1,36 @@
+A design pattern is a reusable solution to a common software design problem. It represents a general guideline or best practice that has been found to be effective in solving a particular type of problem in software development.
+
+Design patterns provide a standard way to describe and communicate solutions to recurring design problems, making it easier for developers to understand and apply them in their own projects. They help to ensure that code is organized, efficient, and easy to maintain, and they can help to improve the overall quality of software by reducing the likelihood of errors and increasing its flexibility and scalability.
+
+Design patterns can be classified into three main categories:
+    - Creational patterns provide object creation mechanisms that increase flexibility and reuse of existing code.
+        - Signleton.
+        - Factory Method.
+        - Abstract Method.
+        - Builder.
+    - Structural patterns deal with object composition, trying to form large structures from small ones.
+        - Adapter.
+        - Decorator.
+        - Facade.
+        - Proxy.
+    - Behavioral patterns focus on communication between objects, helping them to operate together in a coordinated manner.
+        - iterator.
+        - Observer.
+        - Strategy.
+        - Template Method.
+
+----------------------------------------------------------------------------------
+
+SOLID principles are a set of five design principles that were coined by Robert C. Martin in the early 2000s to help developers create more maintainable and scalable software applications. The SOLID acronym stands for:
+
+    (1) S - Single Responsibility Principle: A class should have only one reason to change. This means that a class should only have one responsibility and should not be responsible for multiple tasks.
+
+    (2) O - Open/Closed Principle: A class should be open for extension but closed for modification. This means that a class should be designed in such a way that new functionality can be added without modifying the existing code.
+
+    (3) L - Liskov Substitution Principle: A subclass should be able to be used in place of its superclass without causing any unexpected behavior. This means that the behavior of the subclass should not deviate from that of the superclass.
+
+    (4) I - Interface Segregation Principle: A client should not be forced to depend on interfaces that it does not use. This means that an interface should be designed to contain only the methods that are necessary for its clients.
+
+    (5) D - Dependency Inversion Principle: High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions. This means that the code should be designed in such a way that the higher-level modules are not dependent on the lower-level modules.
+
+These principles promote better software design practices and can help improve the quality, maintainability, and scalability of software applications.

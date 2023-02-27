@@ -1,0 +1,41 @@
+Definition
+----------
+    - Singleton is a creational design pattern that lets you ensure that a class has only one instance, while providing a global access point to this instance.
+
+Concepts
+--------
+    - Only one instance created.
+    - Guarantees control of a resource.
+    - Lazily loaded -> more performance.
+
+Usage
+--------
+    - Singleton pattern is mostly used in multithreaded and database applications. It is used in logging, caching, thread pools, configuration settings etc.
+
+Design
+------
+    - Class is responsible for lifecycle.
+    - Static in nature.
+    - Needs to be thread safe.
+    - Private instance.
+    - No parameters required for construction.
+
+Pros
+----
+    - Saves memory because object is not created at each request. Only single instance is reused again and again.
+    - Control access to shared resources (databases, files, etc).
+    - Global access point for singletoned instances.
+
+Cons
+----
+    - Difficult to undit test.
+    - Tight coupling -> complication for scaling and testing.
+    - Static memory allocation.
+    - Hidden dependencies in the code.
+    - Violation of single responsibility principle.
+
+How to create Singleton design pattern?
+---------------------------------------
+    - Static member: It gets memory only once because of static, it contains the instance of the Singleton class.
+    - Private constructor: It will prevent to instantiate the Singleton class from outside the class.
+    - Static factory method: This provides the global point of access to the Singleton object and returns the instance to the caller.
