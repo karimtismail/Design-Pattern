@@ -14,6 +14,10 @@ The Singleton pattern is implemented by creating a class with a method that crea
 
 Singleton pattern is mostly used in multithreaded and database applications. It is used in logging, caching, thread pools, configuration settings etc.
 
+## UML
+
+![alt text](https://github.com/karimtismail/Design-Pattern/blob/main/src/main/java/org/patterns/creational/singleton/uml.png)
+
 ## Pros
 
 The Singleton pattern has several benefits, including:
@@ -44,3 +48,37 @@ There are three main types of Singleton pattern implementation:
 - **Thread-safe Singleton** 
     - The thread-safe Singleton implementation ensures that only one instance of the class is created and provides a global point of access to this instance, while also being safe for use in multi-threaded environments.
     - This type of Singleton is implemented using techniques such as double-checked locking, synchronized methods, or volatile variables to ensure that the instance is only created once and that it is safe for use in multi-threaded environments.
+
+## Examples
+
+### Database Connection
+
+The DatabaseConnection class has a private constructor and a private static instance variable instance. The class also has an instance variable connection which is of type Connection from the java.sql package. The url, username, and password variables contain the details required to connect to the database.
+
+The constructor is private, which means it cannot be accessed outside the class, and it initializes the connection instance variable using the DriverManager.getConnection() method. If the getConnection() method is called and the connection is closed, a new connection is created.
+
+The getInstance() method is a static method that returns the instance of the DatabaseConnection class. If instance is null, a new instance is created. If instance is not null, the getConnection() method is called to check if the connection is closed. If it is, a new instance is created.
+
+![alt text](https://github.com/karimtismail/Design-Pattern/blob/main/src/main/java/org/patterns/creational/singleton/databaseConnectionExample/uml.png)
+
+### Product Catalog
+
+The Product class is a simple Java class with private instance variables for id, name, description, and price. It also has public getter and setter methods for each of the instance variables. This class represents a product in a product catalog.
+
+The ProductCatalog class is an implementation of the Singleton design pattern for a product catalog. It has a private static instance variable instance, which is the only instance of the class. The class also has a private instance variable products, which is a Map containing all the products in the catalog. The constructor is private, which means it cannot be accessed outside the class, and it initializes the products map.
+
+The getInstance() method is a static method that returns the instance of the ProductCatalog class. If instance is null, a new instance is created. This implementation ensures that only one instance of the ProductCatalog class is created and provides global access to that instance.
+
+The class also has methods to add a product to the catalog, get a product by its ID, and get a list of all products in the catalog. These methods are synchronized to prevent multiple threads from accessing the products map at the same time, which could lead to data inconsistencies.
+
+### Shopping Cart
+
+The ShoppingCart class is an implementation of the Singleton design pattern for a shopping cart. It has a private static instance variable instance, which is the only instance of the class. The class also has a private instance variable items, which is a list of items in the shopping cart. The constructor is private, which means it cannot be accessed outside the class, and it initializes the items list.
+
+The getInstance() method is a static method that returns the instance of the ShoppingCart class. If instance is null, a new instance is created. This implementation ensures that only one instance of the ShoppingCart class is created and provides global access to that instance.
+
+The class also has methods to add and remove items from the cart, get a list of all items in the cart, and get the total price of all items in the cart.
+
+The Item class is a simple Java class with private instance variables for name and price. It also has public getter and setter methods for each of the instance variables. This class represents an item in the shopping cart. When an item is added to the shopping cart, an instance of the Item class is created with the name and price of the item.
+
+![alt text](https://github.com/karimtismail/Design-Pattern/blob/main/src/main/java/org/patterns/creational/singleton/shoppingCartExample/uml.png)
