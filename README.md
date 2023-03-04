@@ -51,7 +51,7 @@ There are three main types of Singleton pattern implementation:
 
 ## Examples
 
-### Database Connection
+### Database Connection Example
 
 The DatabaseConnection class has a private constructor and a private static instance variable instance. The class also has an instance variable connection which is of type Connection from the java.sql package. The url, username, and password variables contain the details required to connect to the database.
 
@@ -61,7 +61,7 @@ The getInstance() method is a static method that returns the instance of the Dat
 
 ![alt text](https://github.com/karimtismail/Design-Pattern/blob/main/src/main/java/org/patterns/creational/singleton/databaseConnectionExample/uml.png)
 
-### Product Catalog
+### Product Catalog Example
 
 The Product class is a simple Java class with private instance variables for id, name, description, and price. It also has public getter and setter methods for each of the instance variables. This class represents a product in a product catalog.
 
@@ -71,7 +71,7 @@ The getInstance() method is a static method that returns the instance of the Pro
 
 The class also has methods to add a product to the catalog, get a product by its ID, and get a list of all products in the catalog. These methods are synchronized to prevent multiple threads from accessing the products map at the same time, which could lead to data inconsistencies.
 
-### Shopping Cart
+### Shopping Cart Example
 
 The ShoppingCart class is an implementation of the Singleton design pattern for a shopping cart. It has a private static instance variable instance, which is the only instance of the class. The class also has a private instance variable items, which is a list of items in the shopping cart. The constructor is private, which means it cannot be accessed outside the class, and it initializes the items list.
 
